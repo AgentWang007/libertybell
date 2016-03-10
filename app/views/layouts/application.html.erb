@@ -6,6 +6,25 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
+
+    <header class="navbar navbar-inverse">
+       <div class="navbar-class">
+          <div class="container">
+           <ul class="nav navbar-nav">
+             <li><%=link_to "HOME", root_path%></li>
+             <li><%=link_to "ABOUT", about_path%></li>
+             <li><%=link_to "PLAN", plan_path %></li>
+             <li><%=link_to "BUILDINGS", building_path %></li>
+             <li><%=link_to "RENTAL", rental_path %></li>
+             <li><%=link_to "CONTACT", contact_path %></li>
+           </ul>
+         </div>
+        </div>
+      </header>
+
+
+
 <body>
 
 <%= yield %>
