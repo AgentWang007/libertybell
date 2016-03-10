@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>MyGreatApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <header class="navbar navbar-inverse">
-       <div class="navbar-class">
-          <div class="container">
-           <ul class="nav navbar-nav">
-             <li><%=link_to "HOME", root_path%></li>
-             <li><%=link_to "ABOUT", about_path%></li>
-             <li><%=link_to "PLAN", plan_path %></li>
-             <li><%=link_to "BUILDINGS", building_path %></li>
-             <li><%=link_to "RENTAL", rental_path %></li>
-             <li><%=link_to "CONTACT", contact_path %></li>
-           </ul>
-         </div>
-        </div>
-      </header>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
+  <body>
 
+    <%= yield %>
 
-<body>
-
-<%= yield %>
-
-</body>
+  </body>
 </html>
